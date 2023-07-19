@@ -1,24 +1,53 @@
 package thefarm.orchards.apple.model;
 
+import thefarm.orchards.common.Core;
+
 public class Apple {
-    private String stem;
-    private String blossom;
+    /*
+
+     */
+    private boolean hasStem;
+    private Core core;
     private String peeling;
     private String juice;
     private String color;
+    private String size;
+    private String texture;
+    private String damage;
 
-    public Apple(String stem, String blossom, String peeling, String juice, String color) {
-        this.stem = stem;
-        this.blossom = blossom;
+    public Apple(boolean hasStem, Core core, String peeling, String juice, String color, String size, String texture, String damage) {
+        this.hasStem = hasStem;
+        this.core = core;
         this.peeling = peeling;
         this.juice = juice;
         this.color = color;
+        this.size = size;
+        this.texture = texture;
+        this.damage = damage;
+    }
+
+    @Override
+    public String toString() {
+        return "Apple{" +
+                "hasStem=" + hasStem +
+                ", core=" + core +
+                ", peeling='" + peeling + '\'' +
+                ", juice='" + juice + '\'' +
+                ", color='" + color + '\'' +
+                ", size='" + size + '\'' +
+                ", texture='" + texture + '\'' +
+                ", damage='" + damage + '\'' +
+                '}';
     }
 
     public String getPeeling() {
         return peeling;
     }
 
+    /**
+     * this method sets
+     * @param peeling This pram is for...
+     */
     public void setPeeling(String peeling) {
         this.peeling = peeling;
     }
@@ -63,26 +92,15 @@ public class Apple {
         this.damage = damage;
     }
 
-    private String size;
-    private String texture;
-    private String damage;
-
-    public Apple() {
+    public boolean getHasStem() {
+        return hasStem;
     }
 
-    public String getStem() {
-        return stem;
+    public void setHasStem(boolean hasStem) {
+        this.hasStem = hasStem;
     }
 
-    public void setStem(String stem) {
-        this.stem = stem;
-    }
+    public Core getCore() { return core; }
 
-    public String getBlossom() {
-        return blossom;
-    }
-
-    public void setBlossom(String blossom) {
-        this.blossom = blossom;
-    }
+    public void setCore(Core core) { this.core = core; }
 }

@@ -3,12 +3,17 @@
  */
 package thefarm;
 
+import thefarm.orchards.apple.model.Apple;
+import thefarm.orchards.common.Core;
+
 public class App {
-    public String getGreeting() {
-        return "Hello World!";
-    }
 
     public static void main(String[] args) {
-        System.out.println(new App().getGreeting());
+        Apple honeycrisp = new Apple(true, Core.EDIBLE, "tough", "sweet", "red", "large", "crunchy", "bruised");
+        System.out.println( honeycrisp );
+        System.out.println("and now with changes");
+        honeycrisp.setHasStem(false);
+        honeycrisp.setCore(Core.PIT);
+        System.out.println(honeycrisp.getHasStem());
     }
 }
