@@ -1,5 +1,6 @@
 package thefarm.orchards.apple.model;
 
+import thefarm.orchards.common.Color;
 import thefarm.orchards.common.Core;
 
 public class Apple {
@@ -10,12 +11,12 @@ public class Apple {
     private Core core;
     private String peeling;
     private String juice;
-    private String color;
+    private Color color;
     private String size;
     private String texture;
     private String damage;
 
-    public Apple(boolean hasStem, Core core, String peeling, String juice, String color, String size, String texture, String damage) {
+    public Apple(boolean hasStem, Core core, String peeling, String juice, Color color, String size, String texture, String damage) {
         this.hasStem = hasStem;
         this.core = core;
         this.peeling = peeling;
@@ -33,7 +34,7 @@ public class Apple {
                 ", core=" + core +
                 ", peeling='" + peeling + '\'' +
                 ", juice='" + juice + '\'' +
-                ", color='" + color + '\'' +
+                ", color=" + color +
                 ", size='" + size + '\'' +
                 ", texture='" + texture + '\'' +
                 ", damage='" + damage + '\'' +
@@ -60,13 +61,9 @@ public class Apple {
         this.juice = juice;
     }
 
-    public String getColor() {
-        return color;
-    }
+    public Color getColor() { return color; }
 
-    public void setColor(String color) {
-        this.color = color;
-    }
+    public void setColor(Color color) { this.color = color; }
 
     public String getSize() {
         return size;

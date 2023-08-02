@@ -4,12 +4,15 @@
 package thefarm;
 
 import thefarm.orchards.apple.model.Apple;
+import thefarm.orchards.common.Color;
 import thefarm.orchards.common.Core;
 
-public class App {
+public class
+
+App {
 
     public static void main(String[] args) {
-        Apple honeycrisp = new Apple(true, Core.EDIBLE, "tough", "sweet", "red", "large", "crunchy", "bruised");
+        Apple honeycrisp = new Apple(true, Core.EDIBLE, "tough", "sweet", Color.RED, "large", "crunchy", "bruised");
         System.out.println( honeycrisp );
         System.out.println("and now with changes");
         honeycrisp.setHasStem(false);
